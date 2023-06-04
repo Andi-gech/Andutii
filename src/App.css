@@ -1,38 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap");
+
+* {
+  overflow: hidden;
+  font-family: "Inconsolata", monospace;
+}
 .App {
-  text-align: center;
+  background-color: rgb(13, 13, 14);
+  height: 100vh;
+  width: 100vw;
+  color: white !important;
+
+  overflow-y: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NameDescription h1 {
+  font-weight: bold;
+}
+.NameDescription h2 {
+  height: 40px;
+  margin: 0px;
+}
+#type {
+  font-weight: 600;
+
+  font-size: 36px;
+  color: rgb(255, 166, 0);
+
+  font-family: sans-serif;
+}
+.Header {
+  height: 100px;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  z-index: 10;
+
+  width: 97vw;
+
+  margin: 10px;
+
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(255, 255, 255, 0.041) 0px 8px 24px;
+}
+.Userfeedback {
+  display: flex;
+
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons :hover {
+  cursor: pointer;
+}
+.Logo img {
+  height: 80px;
+  filter: invert();
+}
+.Logo img {
+  cursor: pointer;
+}
+.buttons {
+  flex: 1;
+  display: flex;
+  height: 50px;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+.buttons ul {
+  display: flex;
+  flex-direction: row;
+}
+.buttons ul li {
+  list-style: none;
+  margin-inline: 10px;
+  font-size: 22px;
+
+  padding: 5px;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 254, 254);
+  box-shadow: rgba(190, 189, 189, 0.308) 0px 8px 24px;
+}
+.buttons ul li:hover {
+  box-shadow: rgba(141, 141, 241, 0.699) 0px 8px 24px;
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+
+  transition-delay: 0.2s;
+}
+.buttons ul li::after {
+  box-shadow: rgba(153, 0, 0, 0.699) 0px 8px 24px;
+}
+.Bodybanner {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+.skillrotate {
+  position: relative;
+  height: 223px;
+  background-color: orange;
+  top: 20px;
+  margin-bottom: -250px;
+  margin-top: 90px;
+  width: 110%;
+
+  rotate: -3deg;
+}
+.skillrotates {
+  position: relative;
+  height: 223px;
+  background-color: orange;
+  top: 20px;
+  margin-bottom: 100px;
+  margin-top: -302px;
+  width: 110%;
+  z-index: 0;
+  rotate: -3deg;
+}
+.Skills {
+  margin-top: 100px;
+  z-index: 1;
+  display: flex;
+  background-color: orange;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  height: 370px;
+
+  width: 100vw;
+  margin-bottom: 100px;
+}
+.Skills .Text {
+  font-size: 19px;
+  font-family: "Inconsolata", monospace;
+}
+.Skills p {
+  margin: 0px;
+  color: rgb(0, 38, 255);
+}
+.Skills p:hover {
+  cursor: pointer;
+}
+.story {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+.storypics {
+  height: 300px;
+
+  width: 800px;
+
+  border-radius: 20px;
+  display: flex;
+
+  flex-direction: row;
+}
+.storys img {
+  width: 100%;
+  height: 100%;
+}
+.storys {
+  flex: 1;
+}
+.Storytext {
+  flex: 2;
+
+  padding-top: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ballbutton {
+  flex: 1;
+}
+.ballwithpercent {
+  display: flex;
+  width: 300px;
+  align-items: center;
+
+  flex-direction: row;
+}
+#line {
+  width: 250px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.13);
+}
+.BAllslist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -90px;
+
+  height: 100%;
+  width: 100%;
+}
+.bodytop {
+  height: 280px;
+
+  width: 700px;
+  flex-wrap: nowrap;
+  display: flex;
+  font-family: "Inconsolata", monospace;
+
+  margin-top: 200px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.Share_Your_Thought {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+.Share_Your_Thought .share {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.Share_Your_Thought .share textarea {
+  width: 400px;
+  background-color: rgba(73, 73, 73, 0.281);
+  border: none;
+  color: aliceblue;
+  border-radius: 10px;
+}
+.Socialmedia {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SocialmediacardsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  width: 350px;
+}
+.copyright {
+  display: flex;
+  flex-direction: row;
+  color: rgba(240, 248, 255, 0.712);
+}
+.Socialcard {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(103, 103, 194, 0.25) 0px 2px 5px -1px,
+    rgba(151, 148, 148, 0.3) 0px 1px 3px -1px;
+}
+.Socialcard:active {
+  background-color: rgb(41, 40, 40);
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+a {
+  text-decoration: none;
   color: white;
 }
+.Headermobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
+  margin-inline: 15px;
+}
+.MobileBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: scroll;
+}
+.MobileBodyImage {
+  display: flex;
+
+  height: 300px;
+  width: 22s0px;
+}
+.text-name {
+  width: 90vw;
+  height: 40vh;
+  padding: 0px;
+}
+.ActiveHourmobile {
+  width: 90vw;
+
+  height: 400px;
+}
+.blackcovermobile {
+  background-color: rgba(0, 0, 0, 0.616);
+  height: 100%;
+}
+.mobileaboutme {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: rgba(103, 103, 194, 0.25) 0px 2px 5px -1px,
+    rgba(151, 148, 148, 0.3) 0px 1px 3px -1px;
+}
+.mobileaboutme h2 {
+  padding-top: 15px;
+}
+.mobileaboutme p {
+  font-weight: normal;
+  font-size: 16px;
+  margin-inline: 5px;
+}
+.topimage {
+  margin-bottom: -30px;
+  margin-top: 40px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.topimage img {
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
+.text-name h1 {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.text-name h2 {
+  height: 45px;
+  margin: 0px;
+  margin-bottom: 30px;
+}
+.text-name #typemobiles {
+  font-weight: bolder;
+  font-size: 30px;
+
+  color: rgb(0, 216, 245);
+
+  font-family: sans-serif;
+}
+.text-name #typemobilesorange {
+  font-weight: bolder;
+  font-size: 32px;
+  color: rgb(255, 238, 0);
+  height: 34px;
+  font-family: sans-serif;
+}
+.text-name button {
+  height: 40px;
+  width: 130px;
+  background-color: rgb(3, 3, 3);
+  border: 1px solid orange;
+  color: aliceblue;
+  font-weight: bold;
+}
+.Mobileskill {
+  background-color: rgb(255, 153, 0);
+  rotate: -6deg;
+  z-index: 0;
+  height: 90px;
+  width: 110vw;
+}
+.Mobileskillcontent h2 {
+  align-self: center;
+}
+.Mobileskillcontent {
+  background-color: rgb(255, 153, 0);
+  margin-top: -60px;
+
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 490px;
+  width: 100vw;
+}
+.text-name #typemobilespink {
+  font-weight: bolder;
+  height: 34px;
+  font-size: 32px;
+  color: rgb(245, 0, 233);
+
+  font-family: sans-serif;
+}
+.MobileBodyImage Img {
+  height: 300px;
+  width: 100%;
+  border-radius: 30px;
+  z-index: 2;
+}
+.Headermobile img {
+  height: 60px;
+  filter: invert();
+  width: 60px;
+}
+.Share_Your_Thought .share textarea:focus {
+  border: none;
+  outline: 1px solid rgba(136, 134, 134, 0.568);
+}
+.Share_Your_Thought .share button {
+  height: 30px;
+  width: 50px;
+  background-color: rgb(8, 8, 8);
+  border: 1px solid none;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.Image {
+  flex: 1;
+  background-position: 10;
+  background-size: cover;
+  z-index: 3;
+  border-top-right-radius: 70px;
+}
+.Balls {
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  border-radius: 60px;
+
+  border: 1px solid rgba(58, 57, 57, 0.582);
+}
+.ActiveHour {
+  background-color: rgb(26, 24, 24);
+  border-radius: 20px;
+  height: 250px;
+  align-items: center;
+
+  background-size: auto;
+  font-family: "Inconsolata", monospace;
+  justify-content: center;
+
+  width: 1000px;
+
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+.NameDescription {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.blackcover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.562);
+}
+.blackcover h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  margin-top: 40px;
+  font-family: "Inconsolata", monospace;
+}
+.ActiveHour img {
+  width: 100%;
+}
+.NameDescription button {
+  height: 50px;
+  width: 200px;
+  border: 3px solid rgb(255, 136, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 90px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 30px;
+}
+button:hover {
+  cursor: pointer;
+}
+.Image:hover {
+  cursor: pointer;
+  scale: 1.2;
+
+  transition-duration: 1s;
+}
+.mobilebackgroundcolor {
+  height: 300px;
+  width: 100px;
+  position: relative;
+  margin-bottom: -300px;
+
+  rotate: -120deg;
+
+  border-radius: 20px;
+
+  background-color: rgb(245, 0, 233);
+}
+.mobilebackgroundcolors {
+  height: 300px;
+  width: 100px;
+  position: relative;
+  margin-bottom: -280px;
+  margin-left: 90px;
+
+  rotate: -40deg;
+  border-radius: 20px;
+
+  background-color: rgb(245, 241, 0);
+}
+.mobilebackgroundcolorf {
+  height: 300px;
+  width: 100px;
+  position: relative;
+  margin-bottom: -300px;
+
+  rotate: 40deg;
+  border-radius: 20px;
+
+  background-color: rgb(0, 216, 245);
+}
+.Projects {
+  max-width: 1100px;
+
+  border-radius: 30px;
+
+  align-items: center;
+  justify-content: center;
+}
+.Projects .Text {
+  align-items: center;
+  font-family: "Inconsolata", monospace;
+
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+}
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px;
+}
+.ProjectCard {
+  background-color: rgb(255, 255, 255);
+  height: 250px;
+  width: 310px;
+  border-radius: 0px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.664) 0px 8px 24px;
+}
+.ProjectCard:hover {
+  cursor: pointer;
+  scale: 1.01;
+  transition-duration: 2s;
+}
+.blackText {
+  color: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation-name: blacks;
+  animation-duration: 1s;
+
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.877);
+  height: 250px;
+
+  display: none;
+  transition-duration: 1s;
+}
+.backgroundcolor {
+  height: 340px;
+  width: 100px;
+  position: relative;
+  margin-right: -70px;
+  rotate: 40deg;
+  border-radius: 20px;
+
+  background-color: rgb(0, 216, 245);
+}
+.backgroundcolors {
+  height: 340px;
+  width: 100px;
+  position: relative;
+  margin-right: -170px;
+  margin-left: 70px;
+
+  rotate: -40deg;
+  border-radius: 20px;
+
+  background-color: rgb(245, 241, 0);
+}
+.backgroundcolorf {
+  height: 310px;
+  width: 100px;
+  position: relative;
+  margin-right: -170px;
+  margin-left: 70px;
+
+  rotate: -120deg;
+
+  border-radius: 20px;
+
+  background-color: rgb(245, 0, 233);
+}
+.bodytop img {
+  width: 100%;
+}
+@keyframes blacks {
   from {
-    transform: rotate(0deg);
+    height: 0px;
+    margin-top: 0%;
   }
   to {
-    transform: rotate(360deg);
+    height: 95%;
   }
+}
+.mobileCard-Lists {
+  width: 400px;
+  padding-inline: 20px;
+  flex-wrap: wrap;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+.Card-Lists {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mobilecard {
+  display: flex;
+  width: 300px;
+}
+.pccard {
+  width: 500px;
+  display: flex;
+}
+.ProjectCard:hover .blackText {
+  cursor: pointer;
+  display: block;
+  display: flex;
+  align-items: center;
+}
+.blackText h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.blackText p {
+  padding-inline: 20px;
+  font-size: 14px;
+}
+.sidemenu {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  display: flex;
+  padding-top: 40px;
+  align-items: center;
+  flex-direction: column;
+
+  animation-name: sidemenus;
+  animation-duration: 1s;
+  width: 80vw;
+  z-index: 3;
+  height: 100vh;
+  background-color: rgb(13, 13, 14);
+}
+.sidemenu .bars {
+  position: absolute;
+  top: 10px;
+  margin: 5px;
+  margin-left: 90px;
+  right: 10px;
+}
+.Mheaderbutton {
+  flex: 1;
+  display: flex;
+  height: 50px;
+  box-shadow: rgba(103, 103, 194, 0.25) 0px 2px 5px -1px,
+    rgba(151, 148, 148, 0.3) 0px 1px 3px -1px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.Mheaderbutton p {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+}
+.Mheaderbutton:active {
+  background-color: rgb(26, 25, 25);
+}
+@keyframes sidemenus {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 80vw;
+  }
+}
+.blackText button {
+  background-color: rgb(102, 148, 248);
+  border: 1px solid transparent;
+}
+.FeedbackCards {
+  background-color: rgb(22, 22, 22);
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-top: 10px;
+
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(219, 214, 214, 0.24) 0px 4px 14px;
+}
+.FeedbackCards img {
+  border-radius: 40px;
+  width: 50px;
+  height: 50px;
+}
+.FeedbackCards .Textcard {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.FeedbackCards .Textcard p {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  padding-left: 10px;
+
+  margin: 0;
+}
+.username {
+  font-weight: bold;
+  font-size: 14px;
 }
