@@ -325,7 +325,7 @@ function Bodybanner() {
         </div>
 
         {data?.map((dataiem, index) => (
-          <div className="Card-Lists">
+          <div className="Card-Lists" key={index}>
             <motion.div
               className="pccard"
               whileInView={{ scale: [0, 1.2, 1] }}
@@ -349,7 +349,7 @@ function Bodybanner() {
             </button>
           </div>
         </div>
-        <div class="contactus">
+        <div className="contactus">
           <h2>Contact-ME</h2>
           <div className="Socialmedia">
             <div className="SocialmediacardsList" style={{ width: 500 }}>

@@ -56,7 +56,7 @@ function MobileBody() {
     setdata([...data, { name: "unkown", message: message }]);
   };
   return (
-    <div className="MobileBody">
+    <div className="MobileBody" onLoadStart={() => console.log("start")}>
       <motion.div
         whileInView={{ rotate: [0, 200, 0] }}
         transition={{
@@ -339,7 +339,7 @@ function MobileBody() {
         </div>
       </div>
       {data?.map((dataiem, index) => (
-        <div className="mobileCard-Lists">
+        <div className="mobileCard-Lists" key={index}>
           <motion.div
             className="mobilecard"
             whileInView={{ scale: [0, 1.2, 1] }}
@@ -364,7 +364,7 @@ function MobileBody() {
           </button>
         </div>
       </div>
-      <div class="contactus">
+      <div className="contactus">
         <h2>Contact-ME</h2>
         <div className="Socialmedia">
           <div className="SocialmediacardsList">
