@@ -703,6 +703,13 @@ button:hover {
   height: 100vh;
   background-color: rgb(13, 13, 14);
 }
+.Loadingcomponent {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .sidemenu .bars {
   position: absolute;
   top: 10px;
