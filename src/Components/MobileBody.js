@@ -403,7 +403,12 @@ function MobileBody() {
           </div>
         </div>
       </div>
-      <div className="Loadingcomponent">
+      <div
+        className="Loadingcomponent"
+        style={{
+          display: !imageLoaded ? "flex" : "none",
+        }}
+      >
         <p>loading..</p>
       </div>
     </>
